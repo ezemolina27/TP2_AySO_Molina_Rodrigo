@@ -1,0 +1,61 @@
+    1  ls -l
+    2  pwd
+    3  whoami
+    4  fdisk -l
+    5  sudo fdisk -l
+    6  ls -la
+    7  ssh-keygen -t ed25519
+    8  ls -la
+    9  cd .ssh
+   10  ls -l
+   11  cat id_ed25519.pub 
+   12  cd 
+   13  pwd
+   14  mkdir repogit
+   15  ls -l
+   16  cd repogit
+   17  ls -l
+   18  git clone git@github.com:ezemolina27/TP2_AySO_Molina_Rodrigo.git
+   19  ls -l
+   20  cd TP2_AySO_Molina_Rodrigo/
+   21  ls -l
+   22  sudo pvs
+   23  cd
+   24  exit
+   25  fdisk -l
+   26  sudo fdisk -l
+   27  sudo fdisk /dev/sdd
+   28  free
+   29  free -h
+   30  sudo mkswap /dev/sdd1
+   31  free -h
+   32  sudo swapon /dev/sdd1
+   33  free -h
+   34  swapon -s
+   35  cat /proc/swaps
+   36  sudo fdisk /dev/sdc
+   37  sudo wipefs -a /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   38  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   39  sudo pvs
+   40  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   41  sudo vgs
+   42  sudo pvs
+   43  sudo vgcreate vg_web /dev/sdc2
+   44  sudo pvs
+   45  sudo lvcreate -L 1G vg_web -n lv_web1
+   46  sudo lvcreate -L 512M vg_web -n lv_web2
+   47  sudo lvcreate -L 512M vg_web -n lv_web3
+   48  sudo lvs
+   49  sudo pvs
+   50  sudo fdisk -l
+   51  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   52  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   53  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   54  ls -l
+   55  cd repogit
+   56  ls -l
+   57  cd TP2_AySO_Molina_Rodrigo/
+   58  sudo pvs > pvs.txt
+   59  sudo vgs > vgs.txt
+   60  sudo lvs > lvs.txt
+   61  history > historial_lvm.txt
